@@ -14,14 +14,23 @@
     <script type="text/babel">
         const container = document.querySelector("#root");
         const root = ReactDOM.createRoot(container);
+        class Listado extends React.Component {
+            render() {
+                return (
+                    <ol>
+                        <li>Hola</li>
+                        <li>Elemento 2</li>
+                        <li>Aprendiendo React</li>
+                        <li>Usando JSX</li>
+                    </ol>
+                )
+            }
+        }
         root.render(
             <div>
-                <ol>
-                    <li>Hola</li>
-                    <li>Elemento 2</li>
-                    <li>Aprendiendo React</li>
-                    <li>Usando JSX</li>
-                </ol>
+                <h1>React CDN</h1>
+                <Listado />
+                
             </div>
         );
     </script>
