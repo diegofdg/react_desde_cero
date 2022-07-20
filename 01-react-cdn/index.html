@@ -7,19 +7,23 @@
     <title>React CDN</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
     <div id="root"></div>
-    <script>
+    <script type="text/babel">
         const container = document.querySelector("#root");
         const root = ReactDOM.createRoot(container);
         root.render(
-                React.createElement("div", null, 
-                    React.createElement("h1", null, "React es lo máximo"),
-                    React.createElement("h2", null, "Soy un h2"),
-                    React.createElement("h3", null, "Soy un h3"),
-                    React.createElement("h4", null, "Soy un h4")
-        ));
+            <div>
+                <ol>
+                    <li>Hola</li>
+                    <li>Elemento 2</li>
+                    <li>Aprendiendo React</li>
+                    <li>Usando JSX</li>
+                </ol>
+            </div>
+        );
     </script>
 </body>
 </html>
