@@ -9,6 +9,17 @@
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 </head>
 <body>
-    <h1>React desde un CDN</h1>    
+    <div id="root"></div>
+    <script>
+        const container = document.querySelector("#root");
+        const root = ReactDOM.createRoot(container);
+        root.render(
+                React.createElement("div", null, 
+                    React.createElement("h1", null, "React es lo máximo"),
+                    React.createElement("h2", null, "Soy un h2"),
+                    React.createElement("h3", null, "Soy un h3"),
+                    React.createElement("h4", null, "Soy un h4")
+        ));
+    </script>
 </body>
 </html>
