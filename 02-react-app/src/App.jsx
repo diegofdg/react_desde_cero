@@ -3,13 +3,19 @@ import './App.css'
 
 const App = () => {
 
+  let contador = 10;
+  const disminuir = () => {
+    contador = contador - 1
+    console.log(contador);
+  };
+
   return (
     <div className="App">
       <div>
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img src={reactLogo} width="250" className="logo react" alt="React logo" />
           <p>
-            <button className="button"> - </button>
-            <h1>10</h1>
+            <button onClick={ disminuir } className="button"> - </button>
+            <h1> { contador } </h1>
             <button className="button"> + </button>
           </p>        
       </div>      
