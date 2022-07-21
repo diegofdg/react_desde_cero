@@ -21,3 +21,19 @@ self.addEventListener("install", (e) => {
             })
     )
 })
+
+self.addEventListener("activate", (e) => {
+    const cacheWhiteList = [CACHE_NAME]
+    
+    e.waitUntil(
+        caches.keys()
+            .then(cacheNames => {
+                return Promise.all(cacheNames.map(cacheName => {
+                    cacheWhiteList.indexOf(cacheName) === -1 && caches.delete(cacheName)
+                }))
+            })   
+            .then(() => {
+                self.clients.claim()
+            })
+    )
+})
