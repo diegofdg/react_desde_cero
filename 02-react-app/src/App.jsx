@@ -1,12 +1,17 @@
+import { useState } from 'react';
 import reactLogo from './assets/react.svg'
 import './App.css'
+import React from 'react';
 
 const App = () => {
+  const [ contador, setContador ] = useState(10);
 
-  let contador = 10;
-  const disminuir = () => {
-    contador = contador - 1
-    console.log(contador);
+  const disminuir = () => {    
+    setContador(contador - 1);
+  };
+
+  const aumentar = () => {    
+    setContador(contador + 1);
   };
 
   return (
@@ -16,7 +21,7 @@ const App = () => {
           <p>
             <button onClick={ disminuir } className="button"> - </button>
             <h1> { contador } </h1>
-            <button className="button"> + </button>
+            <button onClick={ aumentar } className="button"> + </button>
           </p>        
       </div>      
     </div>
