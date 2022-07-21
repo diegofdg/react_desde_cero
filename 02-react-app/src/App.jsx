@@ -1,14 +1,17 @@
 import reactLogo from './assets/react.svg'
 import './App.css'
 
-function App() {
+const App = () => {
 
   return (
     <div className="App">
       <div>
-        <a href="https://reactjs.org" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+          <p>
+            <button className="button"> - </button>
+            <h1>10</h1>
+            <button className="button"> + </button>
+          </p>        
       </div>      
     </div>
   )
