@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import reactLogo from './assets/react.svg'
 import './App.css'
 import React from 'react';
@@ -18,11 +18,11 @@ const App = () => {
     <div className="App">
       <div>
           <img src={reactLogo} width="250" className="logo react" alt="React logo" />
-          <p>
+          <div>
             <button onClick={ disminuir } className="button"> - </button>
             <h1> { contador } </h1>
             <button onClick={ aumentar } className="button"> + </button>
-          </p>        
+          </div>
       </div>      
     </div>
   )
