@@ -31,29 +31,40 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
     <div id="root"></div>
     <script type="text/babel">
         const container = document.querySelector("#root");
-        const root = ReactDOM.createRoot(container);        
-        const Listado = () => {
+        const root = ReactDOM.createRoot(container);
+
+        const Contador = () => {
+            const [cuenta, setCuenta] = React.useState(10);
+
+            const aumentar = () => setCuenta(cuenta + 1);
+            const disminuir = () => setCuenta(cuenta - 1);
+
             return (
-                <ol>
-                    <li>Creando Functional Component</li>
-                    <li>Elemento 2</li>
-                    <li>Aprendiendo React</li>
-                    <li>Usando JSX</li>
-                </ol>
-            )
-        }
+                <>
+                <h1 className={cuenta <= 0 ? "negativo" : "positivo"}>
+                    Contador: {cuenta}
+                </h1>
+                <hr />
+                <button onClick={aumentar}>Aumentar</button>
+                <button onClick={disminuir}>Disminuir</button>
+                </>
+            );
+        };
         root.render(
             <div>
                 <h1>React CDN</h1>
-                <Listado />
+                <Contador />
                 
             </div>
-        );
+        );        
     </script>
     <script src="register.js"></script>
 </body>

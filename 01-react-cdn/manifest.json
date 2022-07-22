@@ -1,7 +1,7 @@
 {
-    "name": "React CDN App",
-    "short_name":"CDN App",
-    "description": "Aplicación hecha con React CDN",
+    "name": "React Contador App",
+    "short_name":"Contador App",
+    "description": "Aplicación Contador hecha con React CDN",
     "background_color": "#333333",
     "theme_color": "#333333",
     "start_url": "./",
