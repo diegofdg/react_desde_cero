@@ -37,6 +37,8 @@ const Cards = () => {
             key={lang}
             lang={lang}
             img={url}
+            fcolor={fcolor}
+            scolor={scolor}
           />
         );
       })}

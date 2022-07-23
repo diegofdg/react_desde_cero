@@ -8,5 +8,6 @@
 
 img {
     width: 6rem;
+    max-height: 6rem;
     padding: 5px;
 }
