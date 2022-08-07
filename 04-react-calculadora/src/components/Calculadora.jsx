@@ -9,9 +9,8 @@ const Calculadora = () => {
 
     return (
         <div>
-            <NumberInput name="Numero 1" />
-            <NumberInput name="Numero 2" />
-
+            <NumberInput />
+            
             <Resultado operacion="Suma" calculo={suma}/>
             <Resultado operacion="Resta" calculo={suma}/>
             <Resultado operacion="Multiplicacion" calculo={suma}/>
