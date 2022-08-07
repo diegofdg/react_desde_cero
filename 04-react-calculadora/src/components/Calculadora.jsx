@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import NumberInput from './NumberInput'
+import Resultado from './Resultado'
 
 const Calculadora = () => {
     const [suma, setSuma] = useState(0)
@@ -8,19 +9,12 @@ const Calculadora = () => {
         <div>
             <NumberInput name="Numero 1" />
             <NumberInput name="Numero 2" />
-            
-            <br />
 
-            <span>Suma: {suma}</span>
-            <br />
-
-            <span>Resta: {suma}</span>
-            <br />
-
-            <span>Multiplicacion: {suma}</span>
-            <br />
-
-            <span>Division: {suma}</span>
+            <Resultado operacion="Suma" calculo={suma}/>
+            <Resultado operacion="Resta" calculo={suma}/>
+            <Resultado operacion="Multiplicacion" calculo={suma}/>
+            <Resultado operacion="Division" calculo={suma}/>
+            <br />            
         </div>
     )
 }
