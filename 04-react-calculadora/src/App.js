@@ -1,9 +1,12 @@
 import React from 'react'
+import Calculadora from './components/Calculadora'
 
 const App = () => {
   return (
     <div>
-      <h1>Hola mundo desde React - PWA</h1>  
+      <h1>Calculadora - PWA</h1>
+      <hr />
+      <Calculadora />
     </div>
   )
 }
