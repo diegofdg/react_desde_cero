@@ -4,8 +4,8 @@ import Resultado from './Resultado'
 
 const NumberInput = () => {
     const [numeros, setNumeros] = useState({
-        numero1: 0,
-        numero2: 0
+        numero1: 10,
+        numero2: 2
     })
 
     const { numero1, numero2 } = numeros
@@ -18,6 +18,9 @@ const NumberInput = () => {
     }
 
     const suma = () => numero1 + numero2
+    const resta = () => numero1 - numero2
+    const multi = () => numero1 * numero2
+    const divi = () => numero1 / numero2
     
     return (
         <>
@@ -30,9 +33,9 @@ const NumberInput = () => {
                 <input name="numero2" value={numero2} onChange={handleChange} type="number" />
             </label>
             <Resultado operacion="Suma" calculo={suma()}/>
-            <Resultado operacion="Resta" calculo={suma()}/>
-            <Resultado operacion="Multiplicacion" calculo={suma()}/>
-            <Resultado operacion="Division" calculo={suma()}/>
+            <Resultado operacion="Resta" calculo={resta()}/>
+            <Resultado operacion="Multiplicacion" calculo={multi()}/>
+            <Resultado operacion="Division" calculo={divi()}/>
         </>
     )
 }
