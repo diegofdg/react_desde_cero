@@ -1,27 +1,16 @@
 import React from 'react'
 import { useState } from 'react'
+import { operaciones } from '../helpers/Operaciones'
 import Resultado from './Resultado'
 
 const NumberInput = () => {
-    const [numeros, setNumeros] = useState({
+    const [ numeros, setNumeros ] = useState({
         numero1: 10,
         numero2: 2
     })
 
-    const { numero1, numero2 } = numeros
+    const { handleChange, suma, resta, multi, divi, numero1, numero2 } = operaciones(numeros, setNumeros)
 
-    const handleChange = (e) => {
-        setNumeros({
-            ...numeros,
-            [e.target.name]: parseFloat(e.target.value)
-        })        
-    }
-
-    const suma = () => numero1 + numero2
-    const resta = () => numero1 - numero2
-    const multi = () => numero1 * numero2
-    const divi = () => numero1 / numero2
-    
     return (
         <>
             <label>
