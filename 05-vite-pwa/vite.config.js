@@ -6,13 +6,23 @@ import { VitePWA } from 'vite-plugin-pwa'
 export default defineConfig({
   plugins: [
     react(),
-    VitePWA({ 
+    VitePWA({
       registerType: 'autoUpdate',
-      name: 'Mi Aplicacion de Vite y PWA',
-      short_name: 'Vite y PWA',
-      theme_color: '#333333',
-      background_color: '#160312',
-      descripcion: 'Una aplicación simple hecha con Vite.js y React',
-      lang: 'es_ar'
+      manifest: {
+        name: 'Mi Aplicacion de Vite y PWA',
+        short_name: 'Vite y PWA',
+        theme_color: '#333333',
+        background_color: '#160312',
+        description: 'Una aplicación simple hecha con Vite.js y React',
+        lang: 'es',
+        icons: [
+          {
+            src: 'assets/logo192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'any'
+          }
+        ]
+      }
     })]
 })
