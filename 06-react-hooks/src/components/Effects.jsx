@@ -1,8 +1,21 @@
+import { useEffect } from "react"
+import { useState } from "react"
+
 const Effects = () => {
+
+    const [users, setUsers] = useState([])
+
+    useEffect(async () => {
+        const res = await fetch("https://jsonplaceholder.typicode.com/users")
+        const data = await res.json()
+        setUsers(data)
+    }, [])      
+    
+    console.log(users)
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        
+
         console.log({
             name: "Nombre",
             email: "Email",
