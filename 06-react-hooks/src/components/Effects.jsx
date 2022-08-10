@@ -1,9 +1,19 @@
 const Effects = () => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        
+        console.log({
+            name: "Nombre",
+            email: "Email",
+            password: "Password"
+        })
+    }
     return (
         <>
             <h1>useEffect</h1>
             <hr />
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">
                         Search
