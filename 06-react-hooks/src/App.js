@@ -1,12 +1,12 @@
 import React from 'react'
-import Effects from './components/Effects'
+import Effect from './components/Effect'
 //import Calculadora from './components/Calculadora'
 //import State from './components/State'
 
 const App = () => {
   return (
     <div className='container text-center'>
-      <Effects />
+      <Effect />
     </div>
     //<State />
     
