@@ -1,14 +1,16 @@
 import React from 'react'
-import Effect from './components/Effect'
+import LayoutEffect from './components/LayoutEffect'
+//import Effect from './components/Effect'
 //import Calculadora from './components/Calculadora'
 //import State from './components/State'
 
 const App = () => {
   return (
     <div className='container text-center'>
-      <Effect />
+      <LayoutEffect />
     </div>
     //<State />
+    //<Effect />
     
     /* <div className="container text-center">
       <h1>Calculadora - PWA</h1>
