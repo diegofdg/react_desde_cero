@@ -10,9 +10,11 @@ const Effect = () => {
   useEffect(() => {
     if (state === "123") {
         window.addEventListener("mousemove", evento)
-    } else {
-        window.removeEventListener("mousemove", evento)
-    }
+    } 
+    return () => {
+        console.log("detenido");
+        window.removeEventListener("mousemove", evento);
+      };
   }, [state])
 
   const handleSubmit = (e) => {
