@@ -1,5 +1,6 @@
 import React from 'react'
-import Ref from './components/Ref'
+import Memorize from './components/memos/Memorize'
+//import Ref from './components/Ref'
 //import LayoutEffect from './components/LayoutEffect'
 //import Effect from './components/Effect'
 //import Calculadora from './components/Calculadora'
@@ -8,8 +9,9 @@ import Ref from './components/Ref'
 const App = () => {
   return (
     <div className='container text-center'>
-      <Ref />
+      <Memorize />
     </div>
+    //<Ref />
     //<LayoutEffect />
     //<State />
     //<Effect />
