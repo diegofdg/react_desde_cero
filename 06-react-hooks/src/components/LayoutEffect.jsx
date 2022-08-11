@@ -1,42 +1,42 @@
-import React, { useState, useLayoutEffect, useEffect } from "react";
+import React, { useState, useLayoutEffect, useEffect } from 'react'
 
 const LayoutEffect = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([])
 
-  const [length, setLength] = useState(0);
+  const [length, setLength] = useState(0)
 
   useEffect(() => {
     const newData = [
         {
-          name: "Yirsis",
-          email: "yirsis@mail.com",
+          name: 'Yirsis',
+          email: 'yirsis@mail.com',
         },
         {
-          name: "Yirsis",
-          email: "yirsis@mail.com",
+          name: 'Yirsis',
+          email: 'yirsis@mail.com',
         },
         {
-          name: "Yirsis",
-          email: "yirsis@mail.com",
+          name: 'Yirsis',
+          email: 'yirsis@mail.com',
         },
         {
-          name: "Yirsis",
-          email: "yirsis@mail.com",
+          name: 'Yirsis',
+          email: 'yirsis@mail.com',
         },
         {
-          name: "Yirsis",
-          email: "yirsis@mail.com",
+          name: 'Yirsis',
+          email: 'yirsis@mail.com',
         },
-      ];
+      ]
     setTimeout(() => {
-        setData(newData);
-      }, 5000);
+        setData(newData)
+      }, 5000)
   }, [])
 
   useLayoutEffect(() => {
     const tam = data.length
     setLength(tam)
-  }, [data.length]);
+  }, [data.length])
   
   return (
     <>
@@ -44,7 +44,7 @@ const LayoutEffect = () => {
       <hr />
       <p>Valores: {length}</p>
     </>
-  );
-};
+  )
+}
 
-export default LayoutEffect;
+export default LayoutEffect

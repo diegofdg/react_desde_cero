@@ -1,26 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 const Effect = () => {
-  const [state, setState] = useState(0);
+  const [state, setState] = useState(0)
 
   const evento = (e) => {
-    console.log("moviendo")
-  }
+    console.log('moviendo')
+  };
 
   useEffect(() => {
-    if (state === "123") {
-        window.addEventListener("mousemove", evento)
-    } 
+    if (state === '123') {
+      window.addEventListener('mousemove', evento)
+    }
+
     return () => {
-        console.log("detenido");
-        window.removeEventListener("mousemove", evento);
-      };
+      console.log('detenido')
+      window.removeEventListener('mousemove', evento)
+    }
   }, [state])
 
   const handleSubmit = (e) => {
     e.preventDefault()
-  };
-
+  }
+  
   return (
     <>
       <h1>useEffect</h1>
@@ -45,7 +46,7 @@ const Effect = () => {
         </button>
       </form>
     </>
-  );
-};
+  )
+}
 
-export default Effect;
+export default Effect
