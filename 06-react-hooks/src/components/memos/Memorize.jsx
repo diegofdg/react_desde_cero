@@ -1,4 +1,5 @@
-import React, {useState, useMemo } from 'react'
+import React, {useState, useMemo, useCallback } from 'react'
+import Btn from "./Btn"
 import Dato from "./Dato"
 
 const Memorize = () => {
@@ -12,11 +13,11 @@ const Memorize = () => {
     return 'Fin del proceso'
   }
 
-  const pesadoMemo = useMemo(()=> pesado(counter), [counter])
+  const pesadoMemo = useMemo(() => pesado(counter), [counter])
 
-  const handleClick = () => {
-    setCounter(counter + 1)
-  }
+  const add = useCallback(()=> {
+    setCounter((actual) => actual + 1)
+  }, [setCounter])
 
   return (
     <>
@@ -25,9 +26,9 @@ const Memorize = () => {
       </h1>
       <hr />
 
-      {pesadoMemo}
+      <pre>{pesadoMemo}</pre>
       
-      <button onClick={handleClick}>+1</button>
+      <Btn add={add}/>
       <button onClick={() => setView(!view)}>Ver/Quitar</button>
     </>
   )
